@@ -118,6 +118,16 @@
 			<version>${version.bootstrap-icons}</version>
 		</dependency>
 
+		<!-- JCEF (Java Chromium Embedded Framework) -->
+		<!-- https://github.com/chromiumembedded/java-cef -->
+		<!-- https://github.com/jcefmaven/jcefmaven -->
+		<!-- https://mvnrepository.com/artifact/me.friwi/jcefmaven -->
+		<dependency>
+			<groupId>me.friwi</groupId>
+			<artifactId>jcefmaven</artifactId>
+			<version>100.0.14.2</version>
+		</dependency>
+
 		<!-- Classgraph -->
 		<!-- https://github.com/classgraph/classgraph -->
 		<!-- https://mvnrepository.com/artifact/io.github.classgraph/classgraph -->
