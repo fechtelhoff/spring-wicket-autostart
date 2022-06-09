@@ -10,4 +10,5 @@ jcef-bundle
 *.bak
 *.csv
 *.sql
+*.log
 rebel.xml
