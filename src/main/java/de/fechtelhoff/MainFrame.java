@@ -6,7 +6,9 @@ package de.fechtelhoff;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.KeyboardFocusManager;
+import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
@@ -134,7 +136,8 @@ public class MainFrame extends JFrame {
 		//     JFrame and afterwards the frame is made visible to the user.
 		getContentPane().add(browserUI, BorderLayout.CENTER);
 		pack();
-		setSize(800, 600);
+		final ScreenSize screenSize = getScreenSize();
+		setSize(screenSize.width - 100, screenSize.height - 100);
 		setVisible(true);
 
 		// (6) To take care of shutting down CEF accordingly, it's important to call
@@ -147,5 +150,15 @@ public class MainFrame extends JFrame {
 				dispose();
 			}
 		});
+	}
+
+	private ScreenSize getScreenSize() {
+		final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		final int width = (int) screenSize.getWidth();
+		final int height = (int) screenSize.getHeight();
+		return new ScreenSize(width, height);
+	}
+
+	private record ScreenSize(int width, int height) {
 	}
 }
