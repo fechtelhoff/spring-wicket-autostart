@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.0</version>
+		<version>2.7.1</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -45,18 +45,19 @@
 		<!-- Dependencies -->
 		<!-- ================================================================================== -->
 		<!-- General-->
-		<version.classgraph>4.8.146</version.classgraph>
+		<version.classgraph>4.8.148</version.classgraph>
+		<version.jcef>100.0.14.3</version.jcef>
 
 		<!-- Wicket & Co. -->
 		<version.wicket-spring-boot-starter>3.1.6</version.wicket-spring-boot-starter>
-		<version.wicket.bootstrap>6.0.0-M6</version.wicket.bootstrap>
+		<version.wicket.bootstrap>4.0.4</version.wicket.bootstrap>
 		<version.bootstrap-icons>1.8.3</version.bootstrap-icons>
 
 		<!-- ================================================================================== -->
 		<!-- Plugins -->
 		<!-- ================================================================================== -->
 		<version.compiler.plugin>3.10.1</version.compiler.plugin>
-		<version.versions.plugin>2.10.0</version.versions.plugin>
+		<version.versions.plugin>2.11.0</version.versions.plugin>
 	</properties>
 
 	<dependencies>
@@ -125,7 +126,7 @@
 		<dependency>
 			<groupId>me.friwi</groupId>
 			<artifactId>jcefmaven</artifactId>
-			<version>100.0.14.2</version>
+			<version>${version.jcef}</version>
 		</dependency>
 
 		<!-- Classgraph -->
